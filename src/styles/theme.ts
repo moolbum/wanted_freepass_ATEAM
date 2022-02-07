@@ -20,13 +20,14 @@ const theme = {
 
   borderRadius: '4px',
   borderGray: '1px solid #939FA5',
+  borderLightGray: '1px solid #e5e5e5',
   borderBlue: '1px solid #2196F3',
 
   marginCenter: '0 auto',
 
   mobile: `screen and (max-width: 360px)`,
 
-  flex: (direction = 'row', align = 'center', justify = 'center') => `
+  flex: (align = 'center', justify = 'center', direction = 'row') => `
     display: flex;
     flex-direction: ${direction};
     align-items: ${align};
