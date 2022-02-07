@@ -20,7 +20,7 @@ const initialState = {
   count: 0,
 };
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action: { type: any }) {
   switch (action.type) {
     case INCREMENT:
       return {
