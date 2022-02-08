@@ -3,23 +3,6 @@ import Card from '../../components/Card/Card';
 import * as S from './Board.style';
 import { Root, Request } from './data';
 
-// export interface Root {
-//   requests: Request[];
-// }
-
-// export interface Request {
-//   id: number;
-//   title: string;
-//   client: string;
-//   due: string;
-//   count?: number;
-//   amount: number;
-//   method: string[];
-//   material: string[];
-//   status: string;
-//   docs?: number;
-// }
-
 const Board = () => {
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
 
@@ -29,12 +12,10 @@ const Board = () => {
       .then(res => setCardInfo(res));
   }, []);
 
-  // console.log(cardInfo);
-
   return (
     <div>
       <S.CardWrap>
-        {cardInfo.map((requests, id): Request => {
+        {cardInfo.map((requests: Request): Request => {
           console.log(requests);
           return <Card key={requests.id} cardData={requests} />;
         })}
