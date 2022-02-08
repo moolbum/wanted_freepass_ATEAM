@@ -23,8 +23,6 @@ const Board = () => {
       .then(res => setFilterInfo(res));
   }, []);
 
-  console.log(cardInfo);
-
   return (
     <S.Wrapper>
       <S.Title>들어온 요청</S.Title>
