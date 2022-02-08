@@ -74,9 +74,12 @@ export const Info = styled.p`
   font-size: ${props => props.theme.fontRegular};
 `;
 
-export const InfoContent = styled.span`
-  margin: 8px 32px 8px 0;
-  background-color: orange;
+export const InfoContent = styled.div`
+  display: flex;
+`;
+
+export const InfoCon = styled.span`
+  margin: 8px 0px 8px 0;
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;
