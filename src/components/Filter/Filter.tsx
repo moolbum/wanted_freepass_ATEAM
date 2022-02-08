@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
+import * as S from './Filter.style';
 
 const Filter = () => {
+  const [optionList, setOptionList] = useState([]);
   const [select, setSelect] = useState('');
 
-  const handleSelect = event => {
-    setSelect(event.target.select);
+  const handleSelect = () => {
+    setSelect('dd');
   };
 
   return (
-    <div>
-      <select name="method" id="method" onChange={handleSelect} value={select}>
-        <option value="milling">밀링</option>
-        <option value="lathe">선반</option>
-      </select>
-    </div>
+    <S.Select>
+      <option>
+        <input type="checkbox" name="method" value="milling" />
+      </option>
+      <option>
+        <form>
+          <input type="checkbox" name="method" value="lathe" />
+        </form>
+      </option>
+    </S.Select>
   );
 };
 
