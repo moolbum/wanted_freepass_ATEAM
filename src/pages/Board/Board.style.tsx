@@ -16,6 +16,17 @@ export const Subtitle = styled.span`
   font-size: ${({ theme }) => theme.fontMedium};
   line-height: 24px;
   color: ${({ theme }) => theme.gray};
+  margin-bottom: 30px;
+`;
+
+export const FilterContainer = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const Button = styled.button`
+  font-size: 14px;
+  color: ${({ theme }) => theme.blue};
 `;
 
 export const CardWrap = styled.div`

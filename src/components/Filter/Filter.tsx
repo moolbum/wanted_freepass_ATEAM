@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './Filter.style';
 
-const Filter = () => {
-  const [optionList, setOptionList] = useState([]);
-  const [select, setSelect] = useState('');
+const Filter = (props: any) => {
+  const [isChecked, setIsChecked] = useState(false);
 
-  const handleSelect = () => {
-    setSelect('dd');
+  const handleChecked = () => {
+    setIsChecked((prev: boolean) => !prev);
   };
 
   return (
-    <S.Select>
-      <option>
-        <input type="checkbox" name="method" value="milling" />
-      </option>
-      <option>
-        <form>
-          <input type="checkbox" name="method" value="lathe" />
-        </form>
-      </option>
-    </S.Select>
+    <S.Dropbox>
+      <S.Description>{props.description}</S.Description>
+      <S.OptionBox>
+        {props.option.map((element: string) => (
+          <S.Option key={element} onClick={handleChecked}>
+            <S.Text>
+              <input
+                type="checkbox"
+                name="method"
+                value={element}
+                checked={isChecked}
+              />
+              {element}
+            </S.Text>
+          </S.Option>
+        ))}
+      </S.OptionBox>
+    </S.Dropbox>
   );
 };
 
