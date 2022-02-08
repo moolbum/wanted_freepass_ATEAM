@@ -5,12 +5,12 @@ import { LIST_DATA, ListData } from './data';
 import { request } from 'http';
 
 const Card = ({ ...requests }) => {
-  console.log(requests);
+  const isValueWaiting = requests.status.includes('대기중');
   return (
     <S.CardContainer>
       <S.TitleWrap>
         <S.Title>{requests.title}</S.Title>
-        <S.Consult>{requests.status}</S.Consult>
+        {!isValueWaiting && <S.Consult>{requests.status}</S.Consult>}
       </S.TitleWrap>
       <S.Customer>{requests.client}</S.Customer>
       <S.Date>{requests.due}까지 납기</S.Date>
