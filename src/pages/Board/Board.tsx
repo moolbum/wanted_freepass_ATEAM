@@ -24,7 +24,6 @@ function Board(): JSX.Element {
       .then(res => setFilterInfo(res));
   }, []);
 
-<<<<<<< HEAD
   const handleToggle = () => {
     setIsToggled(!isToggled);
     setFilteredData([]);
@@ -40,8 +39,6 @@ function Board(): JSX.Element {
     isToggled ? IsShownData() : setFilteredData([]);
   }, [cardInfo]);
 
-=======
->>>>>>> main
   return (
     <S.Wrapper>
       <S.Title>들어온 요청</S.Title>
