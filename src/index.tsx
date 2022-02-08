@@ -6,6 +6,7 @@ import store from './store/index';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
 import GlobalStyle from './styles/GlobalStyle';
+import Toggle from './components/Toggle/Toggle';
 
 ReactDOM.render(
   <>
@@ -13,6 +14,7 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Board />
+        <Toggle />
       </Provider>
     </ThemeProvider>
   </>,
