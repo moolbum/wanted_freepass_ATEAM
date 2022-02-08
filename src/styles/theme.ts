@@ -25,6 +25,8 @@ const theme = {
   marginCenter: '0 auto',
 
   mobile: `screen and (max-width: 360px)`,
+  mobileL: `screen and (max-width: 480px)`,
+  tablet: `screen and (max-width: 768px)`,
 
   flex: (direction = 'row', align = 'center', justify = 'center') => `
     display: flex;
