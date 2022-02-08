@@ -28,23 +28,10 @@ export const Button = styled.button`
   font-size: 14px;
   color: ${({ theme }) => theme.blue};
 `;
-
-export const TitleWrap = styled.div`
-  max-width: 1300px;
-  min-width: 360px;
-  margin: 0 auto;
-`;
-
-export const TitleSubWrap = styled(TitleWrap)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const CardWrap = styled.div`
   ${props => props.theme.flex()}
   flex-wrap: wrap;
-  max-width: 1300px;
+  max-width: 1153px;
   min-width: 360px;
   width: 100%;
   margin: 0 auto;

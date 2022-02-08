@@ -4,6 +4,7 @@ import Filter from '../../components/Filter/Filter';
 import * as S from './Board.style';
 import Toggle from '../../components/Toggle/Toggle';
 import { Request } from './data';
+import NoRequest from './NoRequest/NoRequest';
 
 const Board = () => {
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
@@ -22,7 +23,7 @@ const Board = () => {
       .then(res => setFilterInfo(res));
   }, []);
 
-  console.log(filterInfo);
+  console.log(cardInfo);
 
   return (
     <S.Wrapper>
@@ -42,6 +43,7 @@ const Board = () => {
         {cardInfo.map(function (requests, index) {
           return <Card key={index} {...requests} />;
         })}
+        {cardInfo.length === 0 && <NoRequest />}
       </S.CardWrap>
     </S.Wrapper>
   );
