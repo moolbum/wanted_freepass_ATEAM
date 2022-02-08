@@ -52,22 +52,24 @@ export const Line = styled.div`
 `;
 
 export const InfoContainer = styled.ul`
+  ${props => props.theme.flex('center', 'flex-start')}
   margin: 32px 0;
 `;
 
 export const InfoWrap = styled.li`
-  ${props => props.theme.flex('center', 'flex-start')}
+  ${props => props.theme.flex('flex-start', 'center', 'column')}
   margin: 8px 0;
 `;
 
 export const InfoTitle = styled.p`
   width: 70px;
-  margin-right: 32px;
+  margin: 8px 32px 8px 0;
   font-weight: ${props => props.theme.weightRegular};
   font-size: ${props => props.theme.fontRegular};
 `;
 
-export const Info = styled.p`
+export const Info = styled(InfoTitle)`
+  width: none;
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ButtonBlue = styled.p`
+export const ButtonBlue = styled.button`
   display: inline-block;
   padding: 8px 16px;
   border-radius: ${props => props.theme.borderRadius};

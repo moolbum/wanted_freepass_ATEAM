@@ -6,6 +6,8 @@
     "strict": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
-    "forceConsistentCasingInFileNames": false
+    "allowJs": true,
+    "checkJs": true,
+    "strictFunctionTypes": true
   }
 }
