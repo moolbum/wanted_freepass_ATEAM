@@ -28,6 +28,7 @@ export const Button = styled.button`
   font-size: 14px;
   color: ${({ theme }) => theme.blue};
 `;
+<<<<<<< HEAD
 
 export const TitleWrap = styled.div`
   max-width: 1300px;
@@ -46,10 +47,12 @@ export const Wrap = styled.div`
   justify-content: space-between;
 `;
 
+=======
+>>>>>>> main
 export const CardWrap = styled.div`
   ${props => props.theme.flex()}
   flex-wrap: wrap;
-  max-width: 1300px;
+  max-width: 1153px;
   min-width: 360px;
   width: 100%;
   margin: 0 auto;

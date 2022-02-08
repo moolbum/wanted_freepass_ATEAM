@@ -4,6 +4,7 @@ import Filter from '../../components/Filter/Filter';
 import * as S from './Board.style';
 import Toggle from '../../components/Toggle/Toggle';
 import { Request } from './data';
+import NoRequest from './NoRequest/NoRequest';
 
 function Board(): JSX.Element {
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
@@ -23,6 +24,7 @@ function Board(): JSX.Element {
       .then(res => setFilterInfo(res));
   }, []);
 
+<<<<<<< HEAD
   const handleToggle = () => {
     setIsToggled(!isToggled);
     setFilteredData([]);
@@ -38,6 +40,8 @@ function Board(): JSX.Element {
     isToggled ? IsShownData() : setFilteredData([]);
   }, [cardInfo]);
 
+=======
+>>>>>>> main
   return (
     <S.Wrapper>
       <S.Title>들어온 요청</S.Title>
