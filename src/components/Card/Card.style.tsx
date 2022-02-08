@@ -68,8 +68,15 @@ export const InfoTitle = styled.p`
   font-size: ${props => props.theme.fontRegular};
 `;
 
-export const Info = styled(InfoTitle)`
-  width: none;
+export const Info = styled.p`
+  margin: 8px 32px 8px 0;
+  font-weight: ${props => props.theme.weightBold};
+  font-size: ${props => props.theme.fontRegular};
+`;
+
+export const InfoContent = styled.span`
+  margin: 8px 32px 8px 0;
+  background-color: orange;
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;
