@@ -15,8 +15,8 @@ const Nav = (): JSX.Element => {
   return (
     <S.NavWrapper>
       {sideMenu && <S.MenuSlideBg onClick={hideSideMenu} />}
-      <S.NavWrap onClick={showSideMenu}>
-        <S.HamburgerMenu src="/images/menu.png" />
+      <S.NavWrap>
+        <S.HamburgerMenu src="/images/menu.png" onClick={showSideMenu} />
 
         <S.LogoImg src="/images/logo.png" />
         {sideMenu ? (

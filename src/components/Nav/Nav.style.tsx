@@ -71,6 +71,7 @@ export const LogoWrap = styled.div`
 
 export const MenuLogoBlue = styled.img`
   display: none;
+
   @media ${({ theme }) => theme.mobileL} {
     display: block;
     width: 91.52px;
