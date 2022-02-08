@@ -73,3 +73,13 @@ export const Info = styled(InfoTitle)`
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;
+
+export const InfoContent = styled.div`
+  display: flex;
+`;
+
+export const InfoCon = styled.span`
+  margin: 8px 0px 8px 0;
+  font-weight: ${props => props.theme.weightBold};
+  font-size: ${props => props.theme.fontRegular};
+`;

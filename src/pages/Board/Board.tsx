@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card';
 import * as S from './Board.style';
-import { Root, Request } from './data';
+// import { Root, Request } from './data';
 
 const Board = () => {
+  interface Request {
+    id: number;
+    title: string;
+    client: string;
+    due: string;
+    count?: number;
+    amount: number;
+    method: string[];
+    material: string[];
+    status: string;
+    docs?: number;
+  }
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
 
   useEffect(() => {
@@ -15,9 +27,9 @@ const Board = () => {
   return (
     <div>
       <S.CardWrap>
-        {cardInfo.map((requests: Request): Request => {
+        {cardInfo.map(function (requests, index) {
           console.log(requests);
-          return <Card key={requests.id} cardData={requests} />;
+          return <Card key={index} {...requests} />;
         })}
       </S.CardWrap>
     </div>
