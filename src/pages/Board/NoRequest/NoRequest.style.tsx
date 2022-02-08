@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const NoRequest = styled.div`
+  max-width: 1130px;
   width: 100%;
   padding: 40px 0;
   border: 1px solid ${props => props.theme.mediumGray};

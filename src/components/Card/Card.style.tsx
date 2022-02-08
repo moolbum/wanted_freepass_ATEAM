@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  width: 400px;
+  width: 366px;
   padding: 24px 16px;
   margin: 9px 9px;
-  outline: ${props => props.theme.borderLightGray};
+  border: ${props => props.theme.borderLightGray};
   border-radius: ${props => props.theme.borderRadius};
   transition: 0.2s;
 
   &:hover {
-    outline: ${props => props.theme.borderBlue};
+    border: ${props => props.theme.borderBlue};
     transition: 0.2s;
   }
 `;
