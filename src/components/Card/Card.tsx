@@ -33,7 +33,7 @@ const Card = ({ ...requests }) => {
           {requests.method.map((item: any, index: number) => {
             return (
               <div key={index}>
-                <S.Info>{item.toString()}</S.Info>
+                <S.InfoContent>{item.toString()}</S.InfoContent>
               </div>
             );
           })}

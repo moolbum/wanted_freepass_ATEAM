@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card';
 import * as S from './Board.style';
-import { Root, Request } from './data';
+import { Request } from './data';
 
 const Board = () => {
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
