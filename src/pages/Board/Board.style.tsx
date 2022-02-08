@@ -3,7 +3,15 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 110px 155px 0 110px;
+  /* margin: 110px 155px 0 110px; */
+`;
+
+export const FilterWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1130px;
+  margin: 110px auto;
 `;
 
 export const Title = styled.h2`
