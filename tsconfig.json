@@ -5,6 +5,10 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
+    "noImplicitAny": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strictFunctionTypes": true,
     "typeRoots": ["./node_modules/@types", "@types"]
   }
 }
