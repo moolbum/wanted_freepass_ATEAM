@@ -2,21 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card';
 import * as S from './Board.style';
 import Toggle from '../../components/Toggle/Toggle';
-// import { Root, Request } from './data';
+import { Request } from './data';
 
 const Board = () => {
-  interface Request {
-    id: number;
-    title: string;
-    client: string;
-    due: string;
-    count?: number;
-    amount: number;
-    method: string[];
-    material: string[];
-    status: string;
-    docs?: number;
-  }
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
 
   useEffect(() => {

@@ -2,7 +2,6 @@ import React from 'react';
 import Button from './Button';
 import * as S from './Card.style';
 import { LIST_DATA, ListData } from './data';
-import { request } from 'http';
 
 const Card = ({ ...requests }) => {
   const isValueWaiting = requests.status.includes('대기중');
@@ -24,17 +23,8 @@ const Card = ({ ...requests }) => {
         <S.InfoWrap>
           <S.Info>{requests.count}개</S.Info>
           <S.Info>{requests.amount}개</S.Info>
-
-          <S.InfoContent>
-            {requests.material.map((item: any, index: number) => (
-              <S.InfoCon key={index}>{item.toString()}</S.InfoCon>
-            ))}
-          </S.InfoContent>
-          <S.InfoContent>
-            {requests.method.map((item: any, index: number) => (
-              <S.InfoCon key={index}>{item}</S.InfoCon>
-            ))}
-          </S.InfoContent>
+          <S.Info>{requests.material.join(', ')}</S.Info>
+          <S.Info>{requests.method.join(', ')}</S.Info>
         </S.InfoWrap>
       </S.InfoContainer>
       <Button />
