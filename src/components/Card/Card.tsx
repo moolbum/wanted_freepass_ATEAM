@@ -23,20 +23,8 @@ const Card = ({ ...requests }) => {
         <S.InfoWrap>
           <S.Info>{requests.count}개</S.Info>
           <S.Info>{requests.amount}개</S.Info>
-          {requests.material.map((item: any, index: number) => {
-            return (
-              <div key={index}>
-                <S.InfoContent>{item.toString()}</S.InfoContent>
-              </div>
-            );
-          })}
-          {requests.method.map((item: any, index: number) => {
-            return (
-              <div key={index}>
-                <S.Info>{item.toString()}</S.Info>
-              </div>
-            );
-          })}
+          <S.Info>{requests.material.join(', ')}</S.Info>
+          <S.Info>{requests.method.join(', ')}</S.Info>
         </S.InfoWrap>
       </S.InfoContainer>
       <Button />

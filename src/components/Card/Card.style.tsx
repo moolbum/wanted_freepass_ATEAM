@@ -24,13 +24,17 @@ export const Title = styled.h1`
   font-size: ${props => props.theme.fontMedium};
 `;
 
-export const Consult = styled.p`
-  padding: 7px 8px 4px 8px;
+export const Consult = styled.div`
+  width: 50px;
+  height: 24px;
+  margin-top: -4px;
   border: 1px solid ${props => props.theme.orange};
   border-radius: 16px;
   color: ${props => props.theme.orange};
   font-weight: ${props => props.theme.weightRegular};
   font-size: ${props => props.theme.fontSmall};
+  text-align: center;
+  line-height: 2;
   vertical-align: text-bottom;
 `;
 
@@ -68,15 +72,8 @@ export const InfoTitle = styled.p`
   font-size: ${props => props.theme.fontRegular};
 `;
 
-export const Info = styled.p`
+export const Info = styled.span`
   margin: 8px 32px 8px 0;
-  font-weight: ${props => props.theme.weightBold};
-  font-size: ${props => props.theme.fontRegular};
-`;
-
-export const InfoContent = styled.span`
-  margin: 8px 32px 8px 0;
-  background-color: orange;
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;
