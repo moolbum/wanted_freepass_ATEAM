@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   width: 400px;
   padding: 24px 16px;
-  margin: 0px 16px;
+  margin: 9px 9px;
   outline: ${props => props.theme.borderLightGray};
   border-radius: ${props => props.theme.borderRadius};
   transition: 0.2s;
