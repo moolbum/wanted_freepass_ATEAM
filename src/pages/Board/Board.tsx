@@ -23,6 +23,8 @@ const Board = () => {
       .then(res => setFilterInfo(res));
   }, []);
 
+  console.log(cardInfo);
+
   return (
     <S.Wrapper>
       <S.Title>들어온 요청</S.Title>
@@ -41,7 +43,7 @@ const Board = () => {
         {cardInfo.map(function (requests, index) {
           return <Card key={index} {...requests} />;
         })}
-        {<Card /> && <NoRequest />}
+        {cardInfo.length === 0 && <NoRequest />}
       </S.CardWrap>
     </S.Wrapper>
   );
