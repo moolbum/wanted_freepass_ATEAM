@@ -15,9 +15,8 @@ const Board = () => {
   return (
     <div>
       <S.CardWrap>
-        {cardInfo.map((requests: Request): Request => {
-          console.log(requests);
-          return <Card key={requests.id} cardData={requests} />;
+        {cardInfo.map(function (requests, index) {
+          return <Card key={index} {...requests} />;
         })}
       </S.CardWrap>
     </div>
