@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   width: 400px;
   padding: 24px 16px;
+  margin: 9px 9px;
   outline: ${props => props.theme.borderLightGray};
   border-radius: ${props => props.theme.borderRadius};
   transition: 0.2s;
@@ -67,8 +68,15 @@ export const InfoTitle = styled.p`
   font-size: ${props => props.theme.fontRegular};
 `;
 
-export const Info = styled(InfoTitle)`
-  width: none;
+export const Info = styled.p`
+  margin: 8px 32px 8px 0;
+  font-weight: ${props => props.theme.weightBold};
+  font-size: ${props => props.theme.fontRegular};
+`;
+
+export const InfoContent = styled.span`
+  margin: 8px 32px 8px 0;
+  background-color: orange;
   font-weight: ${props => props.theme.weightBold};
   font-size: ${props => props.theme.fontRegular};
 `;
