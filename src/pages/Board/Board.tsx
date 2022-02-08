@@ -12,7 +12,7 @@ const Board = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
-    fetch('https://wantedateam.herokuapp.com/api')
+    fetch('http://localhost:3000/requests')
       .then(res => res.json())
       .then(res => setCardInfo(res));
   }, []);
