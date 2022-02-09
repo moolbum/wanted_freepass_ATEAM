@@ -60,7 +60,7 @@ function Board(): JSX.Element {
           <S.ToggleLabel htmlFor="checkbox" />
         </S.ToggleWrapper>
         상담 중인 요청만 보기
-      </S.Wrap>
+      </S.FilterWrap>
       <S.CardWrap>
         {isToggled
           ? filteredData?.map(function (requests: any, index: any) {
