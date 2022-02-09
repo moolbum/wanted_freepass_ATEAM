@@ -3,7 +3,21 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 110px 155px 0 110px;
+`;
+
+export const Filter = styled.div`
+  ${props => props.theme.flex('flex-start', 'center', 'column')}
+`;
+
+export const FilterWrap = styled.div`
+  ${props => props.theme.flex('flex-end', 'space-between', 'row')}
+  width: 80%;
+  max-width: 1130px;
+  margin: 110px auto 0;
+
+  @media ${({ theme }) => theme.mobileL} {
+    ${props => props.theme.flex('flex-start', 'center', 'column')}
+  }
 `;
 
 export const Title = styled.h2`
@@ -52,7 +66,17 @@ export const CardWrap = styled.div`
   max-width: 1153px;
   min-width: 360px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
+`;
+
+export const ToggleContainer = styled.div`
+  ${props => props.theme.flex('center', 'flex-end')}
+  margin-bottom: 23px;
+
+  @media ${({ theme }) => theme.mobileL} {
+    ${props => props.theme.flex('center', 'flex-start')}
+    margin-left: 22px;
+  }
 `;
 
 export const ToggleWrapper = styled.div`
@@ -100,4 +124,12 @@ export const ToggleInput = styled.input`
       background-color: ${({ theme }) => theme.blue};
     }
   }
+
+  @media ${({ theme }) => theme.mobileL} {
+    display: none;
+  }
+`;
+
+export const ToggleText = styled.span`
+  margin: 8px 0 0 16px;
 `;
