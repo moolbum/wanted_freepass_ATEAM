@@ -6,11 +6,12 @@
 
 ### 1조 FreePass
 
-| 팀원
+| 팀원  
 | --------------------------------------------------- | ------ |
-| 양주영 [@yangddu](https://github.com/yangddu)
-| 이용우 [@moolbum](https://github.com/moolbum)
+| 양주영 [@yangddu](https://github.com/yangddu)  
+| 이용우 [@moolbum](https://github.com/moolbum)  
 | 홍유진 [@howyoujini](https://github.com/howyoujini)
+<br>
 
 <br>
 
