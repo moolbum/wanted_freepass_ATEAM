@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: "Noto Sans KR", sans-serif;
         color: #323D45;
-        
+        min-width: 370px;
     }
     
     input {
