@@ -1,37 +1,36 @@
 <h1>원티드 프리온보딩 코스 2주차 첫번째 과제</h1>
 
-## 배포
-🔗 **과제물**(aws s3): https://
-
 <br>
 
 ## 팀 소개
+
 ### 1조 FreePass
 
-| 팀원                                                	| 역할                	|
-|-----------------------------------------------------|---------------------|
-| 양주영 [@yangddu](https://github.com/yangddu) 	| 토글|
-| 이용우 [@moolbum](https://github.com/moolbum)         	| 카드|
-| 홍유진 [@howyoujini](https://github.com/howyoujini)    	| 필터링|
-
+| 팀원  
+| --------------------------------------------------- | ------ |
+| 양주영 [@yangddu](https://github.com/yangddu)  
+| 이용우 [@moolbum](https://github.com/moolbum)  
+| 홍유진 [@howyoujini](https://github.com/howyoujini)
 <br>
 
 ## 프로젝트 설명
+
 - 요청서 구현하기
 
 ## 프로젝트 실행 방법
+
 1. git clone
-    ```bash
-    git clone 
-    ```
+   ```bash
+   git clone https://github.com/moolbum/wanted_freepass_ATEAM.git
+   ```
 2. 패키지 설치
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 3. local 프로젝트 실행
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 <br>
 
@@ -42,27 +41,22 @@
 - Build Tool (Create React App)
 - Code Quality Tool (Prettier)
 - Other Tools (Git, Github, notion, Slack. AWS)
-- State (Redux)
 ```
 
-
 ### 양주영
-#### 기능 1
-- [x] 디테일한 기능에 대한 설명
-- [x] 디테일한 기능에 대한 설명
 
+- nav (반응형)
+- '상담 중인 요청만 보기' 토글을 활성화하면 데시보드에 '상담중' 뱃지가 달려있는 카드 노출
 
 ### 이용우
-#### 기능 1
-- [x] 디테일한 기능에 대한 설명
-- [x] 디테일한 기능에 대한 설명
 
+- 카드 컴포넌트, 전체 레이아웃 (반응형)
+- json-server로 데이터 추가
 
 ### 홍유진
-#### 기능 1
-- [x] 디테일한 기능에 대한 설명
-- [x] 디테일한 기능에 대한 설명
 
+- 필터가 선택되면, 해당 방식 조건이 포함된 카드 노출
+- 필터가 둘 다 선택되면, 두 조건의 교집합 노출
 
 <br>
 
@@ -71,42 +65,16 @@
 ```bash
 .
 ├── assets
-├── class
 ├── components
-│   ├── base
-│   │   ├── Button
-│   │   ├── CheckBox
-│   │   ├── ContentContainer
-│   │   ├── ContentItem
-│   │   ├── DateInput
-│   │   ├── Icon
-│   │   ├── Input
-│   │   ├── RadioBox
-│   │   ├── Toggle
-│   │   └── Upload
-│   └── domain
-│       ├── Benefit
-│       ├── Delivery
-│       │   ├── DateInputContainer
-│       │   └── DeliveryAlert
-│       ├── ImageUploadContainer
-│       ├── ImageUploadSection
-│       ├── Layout
-│       │   ├── NavBar
-│       │   └── NavButton
-│       ├── OptionSelector
-│       │   ├── AdditionalItem
-│       │   ├── OptionItem
-│       │   └── ProductItem
-│       ├── Others
-│       ├── Period
-│       │   └── RadioList
-│       ├── ProductBaseInfo
-│       │   ├── FIlterTag
-│       │   └── SelectedTags
-│       └── ProductInformationNotice
-│           └── InformationContentContainer
+│   ├── Card
+│   ├── Filter
+│   ├── Nav
+│   └── Toggle
+│  
 ├── hooks
+├── pages
+│   └── Board
+│       └── NoRequest
 ├── styles
 └── utils
 ```
