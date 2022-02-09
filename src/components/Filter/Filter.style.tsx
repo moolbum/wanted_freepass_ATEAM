@@ -17,6 +17,7 @@ export const Dropbox = styled.div`
   &:hover {
     outline: ${props => props.theme.borderBlue};
     transition: 0.2s;
+    cursor: pointer;
   }
 `;
 
