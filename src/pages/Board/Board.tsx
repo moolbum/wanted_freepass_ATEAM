@@ -6,10 +6,11 @@ import Toggle from '../../components/Toggle/Toggle';
 import { Request } from './data';
 import NoRequest from './NoRequest/NoRequest';
 
-const Board = () => {
+function Board(): JSX.Element {
   const [cardInfo, setCardInfo] = useState<Request[]>([]);
   const [filterInfo, setFilterInfo] = useState([]);
-  const [isChecked, setIsChecked] = useState(false);
+  const [isToggled, setIsToggled] = useState<any>(false);
+  const [filteredData, setFilteredData] = useState<any>([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/requests')
@@ -23,6 +24,21 @@ const Board = () => {
       .then(res => setFilterInfo(res));
   }, []);
 
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+    setFilteredData([]);
+  };
+
+  const IsShownData = () => {
+    const statusFiltered = cardInfo.filter(el => el.status === '상담중');
+    setFilteredData(statusFiltered);
+    console.log(statusFiltered);
+  };
+
+  useEffect(() => {
+    isToggled ? IsShownData() : setFilteredData([]);
+  }, [cardInfo]);
+
   return (
     <S.Wrapper>
       <S.FilterWrap>
@@ -34,19 +50,28 @@ const Board = () => {
           ))}
           <S.Button>필터링 리셋</S.Button>
         </S.FilterContainer>
-        <div>
-          <Toggle />
-          상담 중인 요청만 보기
-        </div>
-      </S.FilterWrap>
+        <S.ToggleWrapper>
+          <S.ToggleInput
+            id="checkbox"
+            type="checkbox"
+            checked={isToggled}
+            onChange={handleToggle}
+          />
+          <S.ToggleLabel htmlFor="checkbox" />
+        </S.ToggleWrapper>
+        상담 중인 요청만 보기
+      </S.Wrap>
       <S.CardWrap>
-        {cardInfo.map(function (requests, index) {
-          return <Card key={index} {...requests} />;
-        })}
-        {cardInfo.length === 0 && <NoRequest />}
+        {isToggled
+          ? filteredData?.map(function (requests: any, index: any) {
+              return <Card key={index} {...requests} />;
+            })
+          : cardInfo?.map(function (requests: any, index: any) {
+              return <Card key={index} {...requests} />;
+            })}
       </S.CardWrap>
     </S.Wrapper>
   );
-};
+}
 
 export default Board;

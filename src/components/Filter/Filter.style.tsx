@@ -18,10 +18,6 @@ export const Dropbox = styled.div`
     outline: ${props => props.theme.borderBlue};
     transition: 0.2s;
   }
-
-  &::-ms-expand {
-    display: none;
-  }
 `;
 
 export const Description = styled.span`
